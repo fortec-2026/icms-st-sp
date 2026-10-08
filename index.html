@@ -275,6 +275,9 @@ td.obs-col{color:var(--text2);font-size:12px;max-width:200px}
     <div class="page active" id="page-consulta">
 
       <div class="alerta">
+        <strong>⚠️ SRE 20/2026 (vigente 01/08/2026):</strong> Ração animal (Anexo XII) e produtos de limpeza/higiene domiciliar (Anexo XIII) saem da ST. Inventário de estoque obrigatório em 31/07/2026.
+      </div>
+      <div class="alerta">
         <strong>⚠️ SRE 34/2026 (vigente 01/10/2026):</strong> Autopeças, pneumáticos, tintas, ferramentas, materiais elétricos e parte dos eletrodomésticos saem da ST. Inventário de estoque obrigatório em 30/09/2026.
       </div>
 
@@ -443,7 +446,7 @@ td.obs-col{color:var(--text2);font-size:12px;max-width:200px}
       <div class="stats-grid" id="statsGrid">
         <div class="stat-card"><div class="stat-label">Total de NCMs</div><div class="stat-num" id="sTotal" style="color:var(--accent)">—</div><div class="stat-sub">na base</div></div>
         <div class="stat-card"><div class="stat-label">Com ST</div><div class="stat-num" id="sComST" style="color:#16a34a">—</div><div class="stat-sub">tributados na fonte</div></div>
-        <div class="stat-card"><div class="stat-label">Fora da ST</div><div class="stat-num" id="sForaST" style="color:#dc2626">—</div><div class="stat-sub">excluídos até jul/26</div></div>
+        <div class="stat-card"><div class="stat-label">Fora da ST</div><div class="stat-num" id="sForaST" style="color:#dc2626">—</div><div class="stat-sub">excluídos até ago/26</div></div>
         <div class="stat-card"><div class="stat-label">Excluídos out/26</div><div class="stat-num" id="sSairao" style="color:#d97706">—</div><div class="stat-sub">SRE 34/2026</div></div>
       </div>
 
@@ -454,6 +457,7 @@ td.obs-col{color:var(--text2);font-size:12px;max-width:200px}
             <li><strong>01/01/2026</strong> — Medicamentos, bebidas alcoólicas, lâmpadas, artefatos domésticos, vidros automotivos (SRE 64/2025)</li>
             <li><strong>01/04/2026</strong> — Perfumaria, higiene pessoal e dermocosméticos (SRE 94/2025)</li>
             <li><strong>01/07/2026</strong> — Sorvetes e preparados · Águas minerais em emb. descartáveis (SRE 09/2026)</li>
+            <li><strong>01/08/2026</strong> — Ração animal (Anexo XII) · Produtos de limpeza/higiene domiciliar (Anexo XIII) · Eletronicos/smartphones/computadores (SRE 20/2026 e SRE 19/2026)</li>
             <li><strong>01/10/2026</strong> — Autopeças · Pneumáticos · Tintas · Ferramentas · Mat. elétricos · Baterias · Refrig./lava-louças (SRE 34/2026)</li>
           </ul>
         </div>
@@ -467,6 +471,8 @@ td.obs-col{color:var(--text2);font-size:12px;max-width:200px}
             <li>SRE 89/2025 — PMPF Bebidas Frias</li>
             <li>SRE 94/2025 — Exclusão Perfumaria (01/04/2026)</li>
             <li>SRE 09/2026 — Exclusão Sorvetes + Águas (01/07/2026)</li>
+            <li>SRE 19/2026 — Exclusão Eletronicos/Smartphones/Computadores (01/08/2026)</li>
+            <li>SRE 20/2026 — Exclusão Ração Animal + Limpeza (01/08/2026)</li>
             <li>SRE 34/2026 — Exclusão em massa (01/10/2026)</li>
           </ul>
         </div>
@@ -474,7 +480,7 @@ td.obs-col{color:var(--text2);font-size:12px;max-width:200px}
           <h3>💡 Tratamento do estoque (excluídos da ST)</h3>
           <ul class="info-list">
             <li>Inventário no Bloco H da EFD ICMS/IPI na data de exclusão</li>
-            <li>Crédito de ICMS-ST em até 24 parcelas (CAT 28/2020)</li>
+            <li>Crédito de ICMS-ST em até 12 parcelas (CAT 28/2020)</li>
             <li>Perfumaria/Higiene: crédito em 12 parcelas (SRE 07/2026)</li>
             <li>Escrituração: Registros E110 e E111 da EFD</li>
           </ul>
@@ -576,7 +582,7 @@ let BASE = [
   {ncm:'8421',desc:'Filtros para lubrificantes/combustiveis',seg:'Autopecas',anexo:'XIV',status:'FORA DA ST',vig:'01/10/2026',obs:'Excluido SRE 34/2026'},
   {ncm:'8422',desc:'Maquinas de lavar louca domesticas',seg:'Eletronicos/Eletrodom.',anexo:'XXII',status:'FORA DA ST',vig:'01/10/2026',obs:'Excluido SRE 34/2026'},
   {ncm:'8450',desc:'Maquinas de lavar roupa',seg:'Eletronicos/Eletrodom.',anexo:'XXII',status:'COM ST',vig:'--',obs:'ST mantida'},
-  {ncm:'8471',desc:'Computadores e unidades',seg:'Eletronicos/Eletrodom.',anexo:'XXII',status:'VERIFICAR',vig:'2026',obs:'Parte dos itens excluida SRE 19/2026'},
+  {ncm:'8471',desc:'Computadores e unidades',seg:'Eletronicos/Eletrodom.',anexo:'XXII',status:'FORA DA ST',vig:'01/08/2026',obs:'Excluido SRE 19/2026 a partir de 01/08/2026'},
   {ncm:'8482',desc:'Rolamentos',seg:'Autopecas',anexo:'XIV',status:'FORA DA ST',vig:'01/10/2026',obs:'Excluido SRE 34/2026'},
   {ncm:'8483',desc:'Arvores de transmissao',seg:'Autopecas',anexo:'XIV',status:'FORA DA ST',vig:'01/10/2026',obs:'Excluido SRE 34/2026'},
   {ncm:'8504',desc:'Reatores para lampadas',seg:'Lampadas',anexo:'XV',status:'FORA DA ST',vig:'01/01/2026',obs:'Excluido SRE 64/2025'},
@@ -584,11 +590,21 @@ let BASE = [
   {ncm:'8511',desc:'Aparelhos eletricos de ignicao - veiculos',seg:'Autopecas',anexo:'XIV',status:'FORA DA ST',vig:'01/10/2026',obs:'Excluido SRE 34/2026'},
   {ncm:'8512',desc:'Aparelhos eletricos de sinalizacao - veiculos',seg:'Autopecas',anexo:'XIV',status:'FORA DA ST',vig:'01/10/2026',obs:'Excluido SRE 34/2026'},
   {ncm:'8516',desc:'Aquecedores eletricos, ferro de passar',seg:'Eletronicos/Eletrodom.',anexo:'XXII',status:'COM ST',vig:'--',obs:'Verificar SRE 19/2026'},
-  {ncm:'8517',desc:'Telefones e smartphones',seg:'Eletronicos/Eletrodom.',anexo:'XXII',status:'VERIFICAR',vig:'2026',obs:'Parte excluida SRE 19/2026'},
+  {ncm:'8517',desc:'Telefones e smartphones',seg:'Eletronicos/Eletrodom.',anexo:'XXII',status:'FORA DA ST',vig:'01/08/2026',obs:'Excluido SRE 19/2026 a partir de 01/08/2026'},
   {ncm:'8539',desc:'Lampadas e tubos eletricos',seg:'Lampadas',anexo:'XV',status:'FORA DA ST',vig:'01/01/2026',obs:'Excluido SRE 64/2025 e SRE 82/2025'},
   {ncm:'8703',desc:'Automoveis de passageiros',seg:'Veiculos',anexo:'V',status:'COM ST',vig:'--',obs:'ST mantida'},
   {ncm:'8704',desc:'Veiculos para transporte de mercadorias',seg:'Veiculos',anexo:'V',status:'COM ST',vig:'--',obs:'ST mantida'},
   {ncm:'8711',desc:'Motocicletas',seg:'Veiculos 2/3 rodas',anexo:'VI',status:'COM ST',vig:'--',obs:'ST mantida'},
+  // Segmentos adicionados no audit de legislacao 2026
+  {ncm:'2106',desc:'Xaropes e capsulas para preparo de refrigerantes',seg:'Refrigerantes/Bebidas',anexo:'III',status:'COM ST',vig:'--',obs:'Incluido no Anexo III; fornecedor industrial'},
+  {ncm:'2202',desc:'Cerveja sem alcool e espumantes sem alcool',seg:'Refrigerantes/Bebidas',anexo:'III',status:'COM ST',vig:'--',obs:'Incluido no Anexo III pela CAT 68/2019'},
+  {ncm:'2309',desc:'Racoes para animais domesticos (pet food)',seg:'Racao Animal',anexo:'XII',status:'FORA DA ST',vig:'01/08/2026',obs:'Excluido pelo SRE 20/2026 a partir de 01/08/2026'},
+  {ncm:'2828',desc:'Agua sanitaria e hipoclorito de sodio',seg:'Produtos de Limpeza',anexo:'XIII',status:'FORA DA ST',vig:'01/08/2026',obs:'Excluido pelo SRE 20/2026 a partir de 01/08/2026'},
+  {ncm:'3402',desc:'Detergentes, desinfetantes e saboes em po',seg:'Produtos de Limpeza',anexo:'XIII',status:'FORA DA ST',vig:'01/08/2026',obs:'Excluido pelo SRE 20/2026 a partir de 01/08/2026'},
+  {ncm:'3808',desc:'Inseticidas, repelentes e produtos sanitarios domiciliares',seg:'Produtos de Limpeza',anexo:'XIII',status:'FORA DA ST',vig:'01/08/2026',obs:'Excluido pelo SRE 20/2026 a partir de 01/08/2026'},
+  {ncm:'3814',desc:'Multiuso, limpadores e removedores de uso geral',seg:'Produtos de Limpeza',anexo:'XIII',status:'FORA DA ST',vig:'01/08/2026',obs:'Excluido pelo SRE 20/2026 a partir de 01/08/2026'},
+  {ncm:'8702',desc:'Onibus eletrico e hibrido',seg:'Veiculos',anexo:'V',status:'COM ST',vig:'01/01/2022',obs:'Incluido no Anexo V; veiculos eletricos/hibridos'},
+  {ncm:'8704',desc:'Caminhoes eletricos e hibridos para carga',seg:'Veiculos',anexo:'V',status:'COM ST',vig:'01/12/2025',obs:'Incluido no Anexo V; veiculos eletricos carga SRE 85/2025'},
 ];
 
 let GERAL = [
@@ -611,7 +627,9 @@ let GERAL = [
   {seg:'Ferramentas',anexo:'Anexo XVIII',status:'FORA DA ST',vig:'01/10/2026',obs:'Exclusao total – SRE 34/2026',base:'Port. SRE 34/2026'},
   {seg:'Artefatos de uso domestico',anexo:'Anexo XX',status:'FORA DA ST',vig:'01/01/2026',obs:'Exclusao total – SRE 64/2025',base:'Port. SRE 64/25'},
   {seg:'Papelaria e artigos de papelaria',anexo:'Anexo XXI',status:'FORA DA ST',vig:'01/10/2026',obs:'Exclusao total materiais eletricos – SRE 34/2026',base:'Port. SRE 34/2026'},
-  {seg:'Eletronicos, eletroeletronicos e eletrodom.',anexo:'Anexo XXII',status:'VERIFICAR',vig:'2026',obs:'Exclusoes pontuais SRE 19/2026 e SRE 34/2026; checar cada item',base:'Port. SRE 19 e 34/2026'},
+  {seg:'Eletronicos, eletroeletronicos e eletrodom.',anexo:'Anexo XXII',status:'FORA DA ST',vig:'01/08/2026',obs:'Principais itens (smartphones, computadores) excluidos SRE 19/2026; checar itens remanescentes',base:'Port. SRE 19 e 34/2026'},
+  {seg:'Racao animal (pet food)',anexo:'Anexo XII',status:'FORA DA ST',vig:'01/08/2026',obs:'Exclusao total – SRE 20/2026',base:'Port. SRE 20/2026'},
+  {seg:'Produtos de limpeza e higiene domiciliar',anexo:'Anexo XIII',status:'FORA DA ST',vig:'01/08/2026',obs:'Exclusao total – SRE 20/2026',base:'Port. SRE 20/2026'},
 ];
 
 // ══════════════════════════════════════════════════════════════════════
